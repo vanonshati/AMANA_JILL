@@ -616,6 +616,32 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <button id="whatsappBtn" class="btn btn-primary btn-whatsapp w-100 py-3">
+            Send Message via WhatsApp
+        </button>
+    </div>
+
+    <script>
+        // CONFIGURATION: Change these values
+        const config = {
+            phoneNumber: "15551234567", // Format: CountryCode + Number (No +, -, or 00)
+            message: "Hello! I am reaching out from your website regarding accounting services. I would like to schedule a consultation."
+        };
+
+        document.getElementById('whatsappBtn').addEventListener('click', function() {
+            // 1. Clean the phone number (remove any stray characters just in case)
+            const cleanPhone = config.phoneNumber.replace(/\D/g, '');
+            
+            // 2. Encode the message so spaces and punctuation work in a URL
+            const encodedMessage = encodeURIComponent(config.message);
+            
+            // 3. Construct the final URL
+            const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodedMessage}`;
+            
+            // 4. Open in a new tab
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
                                     
 
                                                 </div>
@@ -688,6 +714,7 @@
 
 
 </html>
+
 
 
 
