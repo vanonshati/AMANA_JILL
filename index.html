@@ -617,82 +617,7 @@
                                         </div>
                                     </div>
                                     
-                                                   <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Contact Button</title>
-    <!-- Standard Bootstrap CSS for the 'btn' classes used in your snippet -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
-        .btn-whatsapp {
-            background-color: #25D366;
-            border-color: #25D366;
-            color: white;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn-whatsapp:hover {
-            background-color: #128C7E;
-            border-color: #128C7E;
-            color: white;
-            transform: translateY(-2px);
-        }
-    </style>
-</head>
-<body>
 
-    <div class="container-box">
-        <h4 class="mb-4">Contact Our Accountants</h4>
-        <p class="text-muted mb-4 small">Click the button below to start a chat with us pre-filled with your inquiry.</p>
-        
-        <!-- Your original button code, enhanced with an ID and a custom class -->
-        <button id="whatsappBtn" class="btn btn-primary btn-whatsapp w-100 py-3">
-            Send Message via WhatsApp
-        </button>
-    </div>
-
-    <script>
-        // CONFIGURATION: Change these values
-        const config = {
-            phoneNumber: "15551234567", // Format: CountryCode + Number (No +, -, or 00)
-            message: "Hello! I am reaching out from your website regarding accounting services. I would like to schedule a consultation."
-        };
-
-        document.getElementById('whatsappBtn').addEventListener('click', function() {
-            // 1. Clean the phone number (remove any stray characters just in case)
-            const cleanPhone = config.phoneNumber.replace(/\D/g, '');
-            
-            // 2. Encode the message so spaces and punctuation work in a URL
-            const encodedMessage = encodeURIComponent(config.message);
-            
-            // 3. Construct the final URL
-            const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodedMessage}`;
-            
-            // 4. Open in a new tab
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
-
-</body>
-</html>
                                                 </div>
                                             </form>
                                         </div>
@@ -763,6 +688,7 @@
 
 
 </html>
+
 
 
 
